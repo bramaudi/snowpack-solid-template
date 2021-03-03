@@ -1,0 +1,20 @@
+/* Add CSS styles here! */
+body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: auto;
+  background: #f0f0f0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: .5rem;
+  padding: .5rem;
+}
+
+.col {
+  padding: 1rem;
+
+  background: lightcoral;
+}

@@ -1,10 +1,11 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
-    /* ... */
+    src: '/dist',
+    public: '/'
   },
   plugins: [
-    /* ... */
+    '@snowpack/plugin-babel'
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
@@ -18,7 +19,7 @@ module.exports = {
     /* ... */
   },
   devOptions: {
-    /* ... */
+    open: 'none'
   },
   buildOptions: {
     /* ... */
