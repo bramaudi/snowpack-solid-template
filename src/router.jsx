@@ -8,8 +8,8 @@ const routes = [
     component: Home
   },
   {
-    path: '/fav',
-    component: () => import('./pages/fav.jsx')
+    path: '/about',
+    component: () => import('./pages/about.jsx')
   }
 ]
 
@@ -19,7 +19,9 @@ export default () => {
   const addRouter = (path, component) => {
     router(path, async () => {
       if (typeof component().then === 'function') {
+        // Preloader for dynamic page
         setPage(() => (<div>Loading ...</div>))
+
         await component().then(resp => {
           setPage(resp.default())
         })
