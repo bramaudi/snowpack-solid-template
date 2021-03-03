@@ -1,6 +1,7 @@
 import router from 'page';
 import { createSignal } from 'solid-js'
 import Home from 'pages/home'
+import NotFound from 'pages/404'
 
 const routes = [
   {
@@ -10,6 +11,10 @@ const routes = [
   {
     path: '/about',
     component: () => import('pages/about')
+  },
+  {
+    path: '*',
+    component: NotFound
   }
 ]
 
