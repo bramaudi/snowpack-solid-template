@@ -1,6 +1,6 @@
-# New Project
+# snowpack-solid-template
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+> ✨ SolidJS Starter extended from Create Snowpack App (CSA).
 
 ## Available Scripts
 
