@@ -7,6 +7,16 @@ a {
   color: cornflowerblue;
 }
 
+header {
+  padding: 1rem;
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+
+  background: cornflowerblue;
+  color: #fff;
+}
+
 .container {
   margin: .5rem;
   padding: .5rem;

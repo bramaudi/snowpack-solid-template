@@ -6,11 +6,12 @@ module.exports = {
   },
   alias: {
     '@': './src/',
-    'components': './src/components',
     'pages': './src/pages',
+    'components': './src/components',
   },
   plugins: [
-    '@snowpack/plugin-babel'
+    '@snowpack/plugin-babel',
+    // '@snowpack/plugin-webpack',
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
@@ -18,13 +19,14 @@ module.exports = {
   ],
   optimize: {
     /* Example: Bundle your final build: */
-    // "bundle": true,
+    bundle: true,
+    minify: true,
   },
   packageOptions: {
     /* ... */
   },
   devOptions: {
-    /* ... */
+    open: 'none'
   },
   buildOptions: {
     baseUrl: '.'

@@ -1,0 +1,14 @@
+{
+  "name": "Solid PWA",
+  "short_name": "Solid PWA Starter",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#6495ed",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512" }
+  ]
+}
