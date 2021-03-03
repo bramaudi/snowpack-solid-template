@@ -2,7 +2,12 @@
 module.exports = {
   mount: {
     src: '/dist',
-    public: '/'
+    public: '/',
+  },
+  alias: {
+    '@': './src/',
+    'components': './src/components',
+    'pages': './src/pages',
   },
   plugins: [
     '@snowpack/plugin-babel'
@@ -19,9 +24,9 @@ module.exports = {
     /* ... */
   },
   devOptions: {
-    open: 'none'
+    /* ... */
   },
   buildOptions: {
-    /* ... */
+    baseUrl: '.'
   },
 };

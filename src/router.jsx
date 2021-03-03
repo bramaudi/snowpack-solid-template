@@ -1,6 +1,6 @@
 import router from 'page';
 import { createSignal } from 'solid-js'
-import Home from './pages/home.jsx'
+import Home from 'pages/home'
 
 const routes = [
   {
@@ -9,7 +9,7 @@ const routes = [
   },
   {
     path: '/about',
-    component: () => import('./pages/about.jsx')
+    component: () => import('pages/about')
   }
 ]
 
