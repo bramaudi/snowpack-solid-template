@@ -3,7 +3,7 @@ import Router from './router.jsx'
 
 const App = () => {
   return (
-    <main style={{background: "#fff"}}>
+    <main>
       <Router />
     </main>
   )
