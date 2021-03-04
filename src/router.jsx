@@ -1,49 +1,31 @@
 import router from 'page';
+import routes from './routes.js'
 import { createSignal } from 'solid-js'
-import Home from 'pages/home'
-import NotFound from 'pages/404'
-
-const routes = [
-  {
-    path: '/',
-    component: Home
-  },
-  {
-    path: '/about',
-    component: () => import('pages/about')
-  },
-  {
-    path: '*',
-    component: NotFound
-  }
-]
 
 export default () => {
   const [page, setPage] = createSignal(null)
   
-  const addRouter = (path, component) => {
-    router(path, async () => {
+  const mountPage = (path, component) => {
+    router(path, async (context) => {
+      // Async component
       if (typeof component().then === 'function') {
-        // Preloader for dynamic page
-        setPage(() => (<div>Loading ...</div>))
-
-        await component().then(resp => {
-          setPage(resp.default())
-        })
-      }
-      else {
-        setPage(component())
+        const asyncPage = (await component()).default
+        setPage(asyncPage(context))
+      } else {
+        setPage(component(context))
       }
     })
   }
   
   // Add each routes to Router
   routes.forEach(({ path, component }) => {
-    addRouter(path, component)
+    mountPage(path, component)
   })
-  
+ 
   // Router start listening
+  // Enable hashbang #! if your server dont have SPA fallback routing
   router({ hashbang: true })
 
+  // reactive signal contains component
   return page
 }

@@ -6,7 +6,7 @@ export default () => {
       <h1 className="title">Welcome</h1>
       <p>
         This is and index page, edit <code>./src/pages/home.jsx</code>. <br/>
-        See also the <Link url="/about">About page</Link>.
+        See also the <Link url="/about">About page</Link> or <Link url="/about/foo">About Foo</Link>.
       </p>
     </div>
   )
