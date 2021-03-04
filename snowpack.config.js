@@ -21,6 +21,9 @@ module.exports = {
     /* Example: Bundle your final build: */
     bundle: true,
     minify: true,
+    treeshake: true,
+    splitting: true,
+    target: "es2020"
   },
   packageOptions: {
     /* ... */
@@ -29,6 +32,6 @@ module.exports = {
     open: 'none'
   },
   buildOptions: {
-    baseUrl: '.'
+    /* ... */
   },
 };
