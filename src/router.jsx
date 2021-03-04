@@ -24,7 +24,7 @@ export default () => {
  
   // Router start listening
   // Enable hashbang #! if your server dont have SPA fallback routing
-  router({ hashbang: true })
+  router({ hashbang: false })
 
   // reactive signal contains component
   return page
