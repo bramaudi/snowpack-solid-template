@@ -11,7 +11,7 @@ module.exports = {
   },
   plugins: [
     '@snowpack/plugin-babel',
-    // '@snowpack/plugin-webpack',
+    '@snowpack/plugin-webpack',
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
@@ -19,11 +19,11 @@ module.exports = {
   ],
   optimize: {
     /* Example: Bundle your final build: */
-    bundle: true,
-    minify: true,
-    treeshake: true,
-    splitting: true,
-    target: "es2020"
+    // bundle: true,
+    // minify: true,
+    // treeshake: true,
+    // splitting: true,
+    // target: "es2020"
   },
   packageOptions: {
     /* ... */
