@@ -10,9 +10,9 @@ export default () => {
       // Async component
       if (typeof component().then === 'function') {
         const asyncPage = (await component()).default
-        setPage(asyncPage(context))
+        setPage(await asyncPage(context))
       } else {
-        setPage(component(context))
+        setPage(await component(context))
       }
     })
   }
