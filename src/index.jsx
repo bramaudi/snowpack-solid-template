@@ -7,7 +7,7 @@ const App = () => {
     <>
       <Header />
       <main>
-        <Router />
+        <Router fallback={<div>Please wait ...</div>} />
       </main>
     </>
   )

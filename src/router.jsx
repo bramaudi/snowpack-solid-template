@@ -1,16 +1,20 @@
 import router from 'page';
 import routes from './routes.js'
-import { createSignal, lazy } from 'solid-js'
+import { createSignal, lazy, Suspense } from 'solid-js'
 
-export default () => {
+const Router = (props) => {
   const [page, setPage] = createSignal(null)
   
   // Add each routes to Router
   routes.forEach(({ path, component }) => {
     router(path, context => {
       if (typeof component().then === 'function') {
-        const view = lazy(component)
-        setPage(view(context))
+        const View = lazy(component)
+        setPage(
+          <Suspense {...props}>
+            <View {...context} />
+          </Suspense>
+        )
       }
       else {
         setPage(component(context))
@@ -25,3 +29,5 @@ export default () => {
   // reactive signal contains component
   return page
 }
+
+export default Router
