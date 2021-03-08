@@ -1,12 +1,10 @@
-import Link from 'components/Link'
-
 export default () => {
   return (
     <div className="container">
       <h1 className="title">Welcome</h1>
       <p>
         This is and index page, edit <code>./src/pages/home.jsx</code>. <br/>
-        See also the <Link url="/about">About page</Link> or <Link url="/about/foo">About Foo</Link>.
+        See also the <a href="/about">About page</a> or <a href="/about/foo">About Foo</a>.
       </p>
     </div>
   )
